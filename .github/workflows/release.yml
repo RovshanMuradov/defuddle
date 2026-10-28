@@ -12,6 +12,8 @@ permissions:
 
 jobs:
   release:
+    # Fork releases are packed and published manually to GitHub.
+    if: github.repository == 'kepano/defuddle'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
